@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <div id="app">
+    <div class="time"></div>
+  </div>
+  <script>
+    console.log('now:',new Date().getTime());
+    console.log('end:',new Date('2023-09-23').getTime())
+    console.log(Math.ceil((new Date('2023-06-14').getTime()-new Date().getTime())/1000/3600/24));
+
+    // 获取当前时间与截止时间的差值
+    // 并以天为单位进行向上取整
+
+    // end 变量为自定义的截止时间
+    var end = '2023-09-23'
+
+    var time = Math.ceil((new Date(end).getTime()-new Date().getTime())/1000/3600/24)
+
+    // 小于 0 天 默认为 0
+    if(time<0) time=0
+    document.querySelector('.time').innerHTML = time
+
+    // 走定时器
+    setInterval(() => {
+      time = Math.ceil((new Date(end).getTime()-new Date().getTime())/1000/3600/24)
+      if(time<0) time=0
+      document.querySelector('.time').innerHTML = time
+    }, 30000);
+    
+  </script>
+</body>
+</html>

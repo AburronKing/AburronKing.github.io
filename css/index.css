@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'led regular';
+  src: url('../font/DS-DIGIT-4.ttf');
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+#app {
+  background: url('../img/WechatIMG39.jpeg');
+  width: 1920px;
+  height: 1080px;
+  background-size: 100% 100%;
+  position: relative;
+}
+.time {
+  font-family: 'led regular';
+  font-size: 250px;
+  color: rgb(230,0,18);
+  position: absolute;
+  left: 450px;
+  top: 100px;
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  /* text-align: justify;
+  text-align-last: justify;
+  text-align: distribute-all-lines; */
+}
